@@ -1,16 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Krona+One&family=Montserrat&family=Saira+Semi+Condensed:wght@300&display=swap');
 
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .carousel-slide {
+        min-width: 70%;
+        padding: 40px 20px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide {
+        min-width: 100%;
+        margin-right: 0;
+        padding: 30px 15px 20px;
+    }
+
+    .carousel-btn {
+        font-size: 2rem;
+    }
+}
+
+/* Fontes */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-family: 'Krona One', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Saira Semi Condensed', sans-serif;
-    ;
 }
 
+/* Container */
 .container {
     margin: 0 auto;
     display: flex;
@@ -18,21 +39,19 @@
     background-color: transparent;
 }
 
+/* Header*/
 header {
     background-image: url("../assets/bkcerto.png");
     width: auto;
     height: auto;
     padding: 5px;
     position: absolute;
-    background-size: 100px;
     background-repeat: no-repeat;
     min-height: 100vh;
     background-attachment: scroll;
     background-size: cover;
-
     position: relative;
     height: auto;
-
 }
 
 .navbar ul {
@@ -72,15 +91,12 @@ header {
     width: 25%;
     display: flex;
     justify-content: center;
-
 }
 
 .menu {
     width: 50%;
     text-align: center;
     background-color: transparent;
-
-
 }
 
 .menu nav {
@@ -93,15 +109,63 @@ header {
 a {
     text-decoration: none;
     color: white;
-
-
 }
 
 .menu a:hover {
     color: #276B92;
-
 }
 
+.apresentacao__momentos {
+    background-color: #b5b4a9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.apresentacao__momentos__titulo {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #0d2935;
+    font-weight: 700;
+    font-family: 'Krona One', sans-serif;
+}
+
+/*  GALERIA MOMENTOS  */
+.momentos {
+    padding: 50px 20px;
+    background-color: #121212;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.momentos h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.galeria img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    /* corte da imagem */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* --- APRESENTAÇÃO --- */
 .apresentacao {
     display: flex;
     flex-direction: column;
@@ -109,9 +173,9 @@ a {
     text-align: center;
     padding: 0%;
     margin: 0%;
-
 }
 
+/* --- SEÇÃO HISTÓRIA --- */
 .apresentacao__historia {
     background-image: linear-gradient(to bottom, #0d2935, #b5b4a9);
     width: 100%;
@@ -119,7 +183,6 @@ a {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-
 }
 
 .apresentacao__historia__titulo {
@@ -133,25 +196,13 @@ a {
 .apresentacao__historia__texto {
     font-size: 1.3em;
     color: antiquewhite;
-    margin-bottom: 50px;
+    margin: 0 auto 50px auto;
     padding: 10px;
-
-    .historia__fundo {
-        background-color: #b5b4a9;
-        /* cinza usado na página */
-        padding: 20px 40px;
-        border-radius: 5px;
-        max-width: 900px;
-        /* para não ficar esticado demais */
-        margin: 60px auto 40px auto;
-        /* centraliza e dá espaçamento em cima e embaixo */
-        color: #1a1a1a;
-        /* cor do texto para contraste com o fundo */
-        box-sizing: border-box;
-    }
-
+    max-width: 900px;
+    text-align: center;
 }
 
+/* --- SEÇÃO ÁLBUNS --- */
 .apresentacao__albuns {
     background-color: #b5b4a9;
     color: whitesmoke;
@@ -160,76 +211,6 @@ a {
     padding: 0;
     display: flex;
     flex-direction: column;
-
-}
-
-.apresentacao__contato {
-    padding: 20px;
-    padding-top: 100px;
-    margin: 0px;
-    background-color: #b5b4a9;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    gap: 10px;
-    margin-bottom: 20px;
-
-}
-
-.cards__interior__castelos {
-    width: 300px;
-    background-color: black;
-    padding: 38px;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-
-}
-
-.cards__interior__gigantes {
-    width: 300px;
-    background-color: #0c0c0c;
-    padding: 38px;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.cards__interior__lider {
-    width: 300px;
-    background-color: #0c0c0c;
-    padding: 38px;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.cards__interior__icarus {
-    width: 300px;
-    background-color: #0c0c0c;
-    padding: 38px;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.cards img {
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
-    width: 100%;
-    height: auto;
-}
-
-.cards h2 {
-    font-size: large;
-    margin: 0;
-}
-
-.cards p {
-    font-size: medium;
-    margin: 5px;
-    padding: auto;
 }
 
 .apresentacao__albuns__titulo {
@@ -238,6 +219,14 @@ a {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
+}
+
+/* --- SEÇÃO CONTATO --- */
+.apresentacao__contato {
+    padding: 20px;
+    padding-top: 100px;
+    margin: 0px;
+    background-color: #b5b4a9;
 }
 
 .apresentacao__contato__titulo {
@@ -253,7 +242,7 @@ a {
 }
 
 .contato_email {
-    color: #276B92
+    color: #276B92;
 }
 
 .apresentacao__contato__esquerda ul {
@@ -289,39 +278,53 @@ a {
     border-radius: 5px;
 }
 
-.rodape {
+/* --- CARDS --- */
+.cards {
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cards__interior__castelos {
+    width: 300px;
     background-color: black;
+    padding: 38px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-.sociais button {
-    width: 100x;
-    height: 50px;
-    background-color: transparent;
-    color: black;
-    border: none;
-    margin-right: 5px;
-    margin-top: 20px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-
+.cards__interior__gigantes,
+.cards__interior__lider,
+.cards__interior__icarus {
+    width: 300px;
+    background-color: #0c0c0c;
+    padding: 38px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-.sociais button i:hover {
-    color: #276B92;
-    font-size: 30px;
+.cards img {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    width: 100%;
+    height: auto;
 }
 
-.rodape_criador {
-    color: white;
-    font-size: small;
-    margin-top: 1%;
+.cards h2 {
+    font-size: large;
+    margin: 0;
 }
 
-/* NOVAS REGRAS PARA OS TÍTULOS DOS ÁLBUNS */
+.cards p {
+    font-size: medium;
+    margin: 5px;
+    padding: auto;
+}
 
+/* --- CARROSSEL --- */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -343,13 +346,13 @@ a {
 }
 
 .carousel-slide {
-    min-width: 33.3333%;
+    min-width: 33%;
     box-sizing: border-box;
-    padding: 40px 15px 30px;
+    padding: 50px 25px 40px;
     background-color: #0c0c0c;
     border-radius: 5px;
     color: white;
-    margin-right: 6px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -390,7 +393,12 @@ a {
 }
 
 
-/* Setas do carrossel estilo só a seta prateada e aumenta no hover */
+.carousel-slide.castelos-ruinas p {
+    padding: 0 15px;
+    text-align: center;
+}
+
+/* --- BOTÕES DO CARROSSEL --- */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -399,7 +407,6 @@ a {
     border: none;
     font-size: 3rem;
     color: #c0c0c0;
-    /* prateado */
     cursor: pointer;
     user-select: none;
     padding: 0 15px;
@@ -420,20 +427,79 @@ a {
     right: 0;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .carousel-slide {
-        min-width: 50%;
-    }
+/* RODAPÉ */
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* verticalmente centralizado */
+    background-color: black;
+    padding: 15px 0;
+    gap: 20px;
+    /* espaço entre botões e texto */
+    flex-wrap: wrap;
+    /* para responsividade */
 }
 
-@media (max-width: 480px) {
-    .carousel-slide {
-        min-width: 100%;
-        margin-right: 0;
-    }
+.sociais {
+    display: flex;
+    gap: 15px;
+}
 
-    .carousel-btn {
-        font-size: 2rem;
-    }
+.sociais button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sociais button i:hover {
+    color: #276B92;
+    font-size: 30px;
+}
+
+.rodape_criador {
+    color: white;
+    font-size: small;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* --- PESQUISA --- */
+.pesquisa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pesquisa i {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.pesquisa i:hover {
+    transform: scale(1.1);
+    color: #ff4f4f;
+    /* destaque ao passar o mouse */
+}
+
+.pesquisa input {
+    width: 0;
+    opacity: 0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.pesquisa input.ativo {
+    width: 150px;
+    opacity: 1;
 }
